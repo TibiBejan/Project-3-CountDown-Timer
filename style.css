@@ -1,0 +1,265 @@
+:root {
+	--gradient-primary: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
+	--gradient-secondary: linear-gradient(to bottom, rgba(9, 32, 63, 0.8) 0%, rgba(3, 14, 22, 0.8) 100%);
+	--text-color: #fff;
+	--secondary-text-color: #000;
+	--grey-color: #777;
+	--transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: var(--gradient-secondary);
+	color: var(--text-color);
+}
+.container {
+	width: 70%;
+	min-height: 90vh;
+	background-image: var(--gradient-secondary), url('/images/background-image.jpg');
+	background-size: cover;
+	background-position: center;
+	box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+	border-radius: 0.5rem;
+	display: grid;
+	grid-template-rows: 80vh 10vh;
+}
+
+ul {
+	list-style: none;
+}
+h1 {
+	font-family: 'Monoton', cursive;
+}
+span {
+	font-family: 'Roboto', sans-serif;
+}
+
+#header {
+	grid-row: 1 / 2;
+	padding: 2rem;
+}
+
+#navbar {
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.heading-one {
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+}
+
+.hamburger {
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	filter: drop-shadow(0.2rem 0.3rem 0.1rem rgba(0, 0, 0, 0.5));
+	cursor: pointer;
+}
+
+.line {
+	width: 3rem;
+	height: 0.3rem;
+	margin: 0.3rem 0;
+	border-radius: 2rem;
+	background-color: #fff;
+}
+
+.header-showcase {
+	height: 70vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.heading-two {
+	margin-bottom: 2rem;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+}
+
+.description {
+	width: 30vw;
+	margin-bottom: 2rem;
+	font-size: 1rem;
+	text-align: center;
+	color: var(--text-color);
+}
+
+.countdown-timer {
+	width: 65vh;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.element-box {
+	height: 15vh;
+	width: 15vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.digit {
+	font-size: 3.5rem;
+	background-image: var(--gradient-secondary);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: var(--transition);
+}
+
+.paragraph {
+	color: var(--secondary-text-color);
+	letter-spacing: 0.1rem;
+	font-weight: 600;
+}
+
+#footer-links {
+	line-height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list-item {
+	margin: 0 0.5rem;
+}
+
+.footer-link {
+	text-decoration: none;
+}
+
+.footer-link i {
+	color: var(--grey-color);
+	font-size: 1.5rem;
+	transition: var(--transition);
+}
+
+.footer-link:hover i {
+	color: var(--text-color);
+}
+
+@media screen and (max-width: 1100px) {
+	.heading-one {
+		font-size: 1.5rem;
+	}
+
+	.hamburger {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	.line {
+		width: 2.5rem;
+		height: 0.2rem;
+		margin: 0.25rem 0;
+	}
+
+	.heading-two {
+		font-size: 1.5rem;
+	}
+
+	.description {
+		width: 50vw;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.description {
+		width: 55vw;
+		font-size: 0.9rem;
+	}
+
+	.countdown-timer {
+		width: 45vh;
+	}
+
+	.element-box {
+		height: 10vh;
+		width: 10vh;
+	}
+
+	.digit {
+		font-size: 2rem;
+	}
+	.paragraph {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.container {
+		width: 100%;
+		min-height: 100vh;
+		border-radius: 0;
+	}
+	#header {
+		padding: 0.5rem;
+	}
+	.description {
+		width: 85vw;
+		font-size: 0.9rem;
+	}
+
+	.countdown-timer {
+		width: 45vh;
+	}
+
+	.paragraph {
+		font-size: 0.6rem;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#header {
+		padding: 0.5;
+	}
+
+	.heading-one {
+		font-size: 1.2rem;
+	}
+
+	.countdown-timer {
+		width: 40vh;
+	}
+
+	.element-box {
+		height: 9vh;
+		width: 9vh;
+	}
+
+	.paragraph {
+		font-size: 0.6rem;
+	}
+}
